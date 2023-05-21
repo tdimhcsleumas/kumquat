@@ -1,5 +1,5 @@
 EXEC = hello
-SRC = $(shell find . -name "*.c" -o -name "*.h")
+SRC = $(shell find ./src -name "*.c" -o -name "*.h")
 CXX = gcc
 CXX_OPTIONS = -std=c99 -g -O2 -Wall -Wextra -Wpedantic -Wshadow -Werror -fsanitize=address -lm 
 
