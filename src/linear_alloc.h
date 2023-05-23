@@ -52,6 +52,4 @@ void lac_destroy(lac_info_t li) {
 }
 
 
-
-
 #endif /* __LINEAR_ALLOC_H__ */
