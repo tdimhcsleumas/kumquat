@@ -40,6 +40,8 @@ int main(void) {
 
    print_arr_info(int_arr);
 
+   array_int_add(&int_arr, 55);
+
    for (size_t i = 0; i < int_arr->size; ++i) {
       printf("i: %zu, val: %d\n", i, array_int_get(int_arr, i));
    }

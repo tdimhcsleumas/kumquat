@@ -77,6 +77,12 @@ void array_ ## T ## _ensure_capacity(ARRAY_TYPE(T)** array_p, size_t count) \
     *array_p = new_array; \
 } \
 \
+void array_ ## T ## _add(ARRAY_TYPE(T) **array_p, T val) \
+{ /** Add a single element, abort if not able to */ \
+    array_ ## T ## _ensure_capacity(array_p, 1); \
+    ARRAY_TYPE(T) *array = *array_p; \
+    ((T*)(array + 1))[array->size++] = val; \
+} \
 void array_ ## T ## _add_all(ARRAY_TYPE(T)** array_p, size_t count, ...) \
 { /** Add all count variables to the end of the array */ \
     va_list ap; \
