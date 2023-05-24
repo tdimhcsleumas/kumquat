@@ -5,4 +5,6 @@
 
 void noop() {}
 
+#define min(a, b) ((a) < (b)) ? (a) : (b)
+
 #endif /* __MISC_H__ */
